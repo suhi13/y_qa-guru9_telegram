@@ -4,7 +4,6 @@ import static com.codeborne.selenide.Condition.visible;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import io.qameta.allure.Feature;
@@ -20,12 +19,12 @@ public class RegistrationFormTest extends TestBase {
     RegistrationFormSteps steps = new RegistrationFormSteps();
 
     @Test
-    @Owner("Yuliia Sukhova")
+//    @Owner("Yuliia Sukhova")
     @Tag("positive")
-    @Severity(SeverityLevel.CRITICAL)
-    @Story("User can register")
-    @Feature("Registration")
-    @DisplayName("User submits filled registration form")
+//    @Severity(SeverityLevel.CRITICAL)
+//    @Story("User can register")
+//    @Feature("Registration")
+//    @DisplayName("User submits filled registration form")
     public void checkRegistrationFormTest() {
         steps.openPage();
         steps.fillRegistrationForm();
@@ -34,12 +33,12 @@ public class RegistrationFormTest extends TestBase {
     }
 
     @Test
-    @Owner("Yuliia Sukhova")
+//    @Owner("Yuliia Sukhova")
     @Tag("negative")
-    @Severity(SeverityLevel.CRITICAL)
-    @Story("User can register")
-    @Feature("Registration")
-    @DisplayName("User submits empty registration form")
+//    @Severity(SeverityLevel.CRITICAL)
+//    @Story("User can register")
+//    @Feature("Registration")
+//    @DisplayName("User submits empty registration form")
     void checkSubmittingEmptyRegistrationFormTest() {
         RegistrationPage registrationPage = new RegistrationPage();
 
