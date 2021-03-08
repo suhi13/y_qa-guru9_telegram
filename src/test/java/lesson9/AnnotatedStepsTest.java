@@ -20,7 +20,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
-public class AnnotatedStepsTest {
+public class AnnotatedStepsTest extends TestBase {
 
     private final static String BASE_URL = "https://github.com";
     private final static String REPOSITORY = "suhi13/y_qaguru";

@@ -11,7 +11,7 @@ import org.openqa.selenium.By;
 
 import io.qameta.allure.Allure;
 
-public class LambdaStepsTest {
+public class LambdaStepsTest extends TestBase{
 
     private final static String BASE_URL = "https://github.com";
     private final static String REPOSITORY = "suhi13/y_qaguru";
@@ -22,20 +22,14 @@ public class LambdaStepsTest {
         Allure.story("User can see menu elements");
         Allure.parameter("Repository", REPOSITORY);
 
-        step("Open Base URL", () -> {
-            open(BASE_URL);
-        });
+        step("Open Base URL", () -> open(BASE_URL));
 
-        step("Search repository", () -> {
-            $(".header-search-input").as("Search field").setValue(REPOSITORY).submit();
-        });
+        step("Search repository", () -> $(".header-search-input").as("Search field").setValue(REPOSITORY)
+                                                                 .submit());
 
-        step("Open repository in search results", () -> {
-            $(By.linkText(REPOSITORY)).click();
-        });
+        step("Open repository in search results", () -> $(By.linkText(REPOSITORY)).click());
 
-        step("Make sure 'Issues' element is displayed in left-side menu", () -> {
-            $(withText("Issues")).shouldBe(visible);
-        });
+        step("Make sure 'Issues' element is displayed in left-side menu",
+                () -> $(withText("Issues")).shouldBe(visible));
     }
 }

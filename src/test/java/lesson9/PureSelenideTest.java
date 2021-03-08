@@ -21,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 
-public class PureSelenideTest {
+public class PureSelenideTest extends TestBase {
 
     private final static String BASE_URL = "https://github.com";
     private final static String REPOSITORY = "suhi13/y_qaguru";
