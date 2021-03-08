@@ -2,8 +2,6 @@ package steps;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 import com.github.javafaker.Faker;
@@ -47,7 +45,7 @@ public class RegistrationFormSteps {
         registrationPage.firstName.setValue(firstName);
         registrationPage.lastName.setValue(lastName);
         registrationPage.email.setValue(emailAddress);
-        $(byText(gender)).click();
+        registrationPage.findElementByText(gender).click();
         registrationPage.mobile.setValue(mobile);
         registrationPage.dateOfBirth.sendKeys(Keys.CONTROL + "a");
         registrationPage.dateOfBirth.sendKeys(dateOfBirth + Keys.ENTER);

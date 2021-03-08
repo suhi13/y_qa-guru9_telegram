@@ -1,4 +1,4 @@
-package lesson9;
+package tests.lesson9;
 
 import static com.codeborne.selenide.Condition.visible;
 
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import io.qameta.allure.Feature;
-import io.qameta.allure.Link;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;

@@ -1,4 +1,4 @@
-package lesson9;
+package tests.lesson9;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
@@ -17,6 +17,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.qameta.allure.selenide.AllureSelenide;
 
 public class TestBase {
+
     @BeforeAll
     static void setup() {
         addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));

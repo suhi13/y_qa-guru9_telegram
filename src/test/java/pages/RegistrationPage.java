@@ -7,8 +7,6 @@ import static com.codeborne.selenide.Selenide.$$;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import org.openqa.selenium.By;
-
 public class RegistrationPage {
 
     public SelenideElement firstName = $("#firstName"),
@@ -20,8 +18,8 @@ public class RegistrationPage {
             subjectInput = $("#subjectsInput"),
             hobbyReadingCheckbox = $("#hobbies-checkbox-2").parent(),
             address = $("#currentAddress"),
-            state = $(By.xpath(".//div[text()='Select State']")),
-            city = $(By.xpath(".//div[text()='Select City']")),
+            state = $(byText("Select State")),
+            city = $(byText("Select City")),
             chooseFileButton = $("#uploadPicture"),
             submitButton = $("#submit"),
             modalTitle = $(".modal-title"),
