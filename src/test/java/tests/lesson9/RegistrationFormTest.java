@@ -21,7 +21,7 @@ public class RegistrationFormTest extends TestBase {
 
     @Test
     @Owner("Yuliia Sukhova")
-    @Tags({@Tag("web"), @Tag("positive")})
+    @Tag("positive")
     @Severity(SeverityLevel.CRITICAL)
     @Story("User can register")
     @Feature("Registration")
@@ -35,7 +35,7 @@ public class RegistrationFormTest extends TestBase {
 
     @Test
     @Owner("Yuliia Sukhova")
-    @Tags({@Tag("web"), @Tag("negative")})
+    @Tag("negative")
     @Severity(SeverityLevel.CRITICAL)
     @Story("User can register")
     @Feature("Registration")
