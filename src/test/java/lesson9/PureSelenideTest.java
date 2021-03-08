@@ -3,8 +3,8 @@ package lesson9;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.visible;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
 
 import org.junit.jupiter.api.DisplayName;
@@ -40,7 +40,7 @@ public class PureSelenideTest extends TestBase {
         open(BASE_URL);
         $(".header-search-input").as("Search field").setValue(REPOSITORY).submit();
         $(By.linkText(REPOSITORY)).click();
-
-        $(withText("Issues")).shouldBe(Condition.visible);
+        
+        $(withText("Tes&t")).shouldBe(visible);
     }
 }
